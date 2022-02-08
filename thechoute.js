@@ -1290,7 +1290,7 @@ if (choute.message.listResponseMessage){
   leo.updatePresence(from, Presence.composing)
   if (!isRegister) return reply(baby.only.usrReg)
   uptime = process.uptime()
-  leo.sendMessage(from, `${prefix}menu`, MessageType.text, {quoted: choute, contextInfo: { mentionedJid: [sender,Oowner]}})  
+  leo.sendMessage(from, `${prefix}menuofc`, MessageType.text, {quoted: choute, contextInfo: { mentionedJid: [sender,Oowner]}})  
   addFilter(from)
   addLevelingLevel(sender, 5)	}} 
 
@@ -1488,7 +1488,7 @@ break
                 addFilter (from)
                 break */
 
-case 'menu':
+/*case 'menu':
                 if (!isRegister) return reply(baby.only.usrReg)
                 if (isBan) return reply (baby.only.benned)	
                 reply('Cargando Menu, Porfavor no hacer spam de mensaje')
@@ -1500,7 +1500,7 @@ case 'menu':
                 {contextInfo: { mentionedJid: [sender,Oowner]}})
                 men = leo.prepareMessageFromContent(from, { buttonsMessages })
                 leo.relayWAMessage(men)
-                break     
+                break */    
 
 case 'd':
 case 'del':

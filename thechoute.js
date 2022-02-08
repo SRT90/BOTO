@@ -1461,6 +1461,8 @@ case 'reg':
 └────「 *T90 mᎾᎠs* 」
 Verificación completa usa *${prefix}menu* para ver el Menu`
                 let tampa = await getBuffer(ppimg)
+                buttons = [{buttonId:`${prefix}menu`,buttonText:{displayText: 'Menu'},type:1}]
+                imageMsg = (await leo.prepareMessageMedia(tampa, "imageMessage", { thumbnail: tampa, })).imageMessage
                 leo.sendMessage(from, tampa, image, {quoted: choute, caption: capt})
                 break 
 

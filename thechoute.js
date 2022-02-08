@@ -1284,6 +1284,15 @@ if (choute.message.listResponseMessage){
   addFilter(from)
   addLevelingLevel(sender, 5)	}}
 //BOTONES
+if (choute.message.listResponseMessage){
+  test = choute.message.listResponseMessage.singleSelectReply.selectedRowId
+  if (test.includes(`menu`)){
+  leo.updatePresence(from, Presence.composing)
+  if (!isRegister) return reply(baby.only.usrReg)
+  uptime = process.uptime()
+  leo.sendMessage(from, `${prefix}menu`, MessageType.text, {quoted: choute, contextInfo: { mentionedJid: [sender,Oowner]}})  
+  addFilter(from)
+  addLevelingLevel(sender, 5)	}} 
 
 if (choute.message.buttonsResponseMessage){
   test = choute.message.buttonsResponseMessage.selectedButtonId
@@ -1461,7 +1470,7 @@ case 'reg':
 └────「 *T90 mᎾᎠs* 」
 Verificación completa usa *${prefix}menu* para ver el Menu`
 let tampa = await getBuffer(ppimg);
-buttons = [{buttonId:`${prefix}menu`,buttonText:{displayText: 'Menu'},type:1}] 
+buttons = [{buttonId:`menu`,buttonText:{displayText: 'Menu'},type:1}] 
 imageMsg = (await leo.prepareMessageMedia(tampa, "imageMessage", { thumbnail: tampa, })).imageMessage
 buttonsMessage = {footerText:`TBOT`, imageMessage: imageMsg,
 contentText:`${capt}`,buttons,headerType:4}

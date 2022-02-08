@@ -1488,7 +1488,7 @@ break
                 addFilter (from)
                 break */
 
-/*case 'menu':
+case 'menu':
                 if (!isRegister) return reply(baby.only.usrReg)
                 if (isBan) return reply (baby.only.benned)	
                 reply('Cargando Menu, Porfavor no hacer spam de mensaje')
@@ -1500,7 +1500,7 @@ break
                 {contextInfo: { mentionedJid: [sender,Oowner]}})
                 men = leo.prepareMessageFromContent(from, { buttonsMessages })
                 leo.relayWAMessage(men)
-                break */    
+                break    
 
 case 'd':
 case 'del':

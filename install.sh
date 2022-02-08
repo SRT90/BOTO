@@ -43,8 +43,8 @@ npm i qrcode -y
 echo -e '\e[1;32m
 Descarga Completada al 100%
 Creador: Thechoute
-Numero: +18299897014
-Instagram: the_choute_
+Numero: +34657993207
+Instagram: t9ma.n
 Youtube: https://www.youtube.com/c/thechout
 
 Escribe node thechoute para iniciar el bot

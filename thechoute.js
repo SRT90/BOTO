@@ -1487,8 +1487,93 @@ break
                 leo.relayWAMessage(prep)
                 addFilter (from)
                 break */
-
-case 'menu':
+case "menu":
+  if (!isRegister) return reply(baby.only.usrReg)
+  if (isBan) return reply (baby.only.benned)
+      let lista = leo.prepareMessageFromContent(from,{
+      "listMessage": {
+      "description": `${cmenu}`,
+      "buttonText": "Selecciona tu menu",
+      "listType": "SINGLE_SELECT",
+      "sections": [
+      { "title": `Menu Basico`,
+      "rows": [
+      {
+      "title": 'Mi Perfil',
+      "rowId": `miperfil`
+      },
+      {
+      "title": 'Recomendaciones',
+      "rowId": `recomendaciones`
+      },
+      {
+      "title": 'Menu Completo',
+      "rowId": `allmenu`
+      },
+      ]
+      },
+      { "title": `Seleccion tu menu`,
+      "rows": [
+      {
+      "title": 'Menu de Grupos',
+      "rowId": `admin`
+      },
+      {
+      "title": 'Owner / Dueño Del Bot',
+      "rowId": `menuowner`
+      },
+      {
+      "title": 'Descargas/Multimedia',
+      "rowId": `menumedia`
+      },
+      {
+      "title": 'Juegos/Entretenimiento',
+      "rowId": `entrenimiento`
+      },
+      {
+      "title": 'Logos',
+      "rowId": `Logos`
+      },   
+      ]
+      },        
+      {
+      "title": `🔖 Créditos / Creador 🔮 `,
+      "rows": [
+      {
+      "title": ' 🔮 Creador',
+      "rowId": `creador`
+      },
+      {
+      "title": 'Donacion / Agradecimiento',
+      "rowId": `agradecimiento`
+      },
+      ]    
+      },
+      {
+      "title": `Link Grupos de WhatsApp Recomendados`,
+      "rows": [
+      {
+      "title": 'Grupos de Amistad & Mas',
+      "rowId": `linkgpw`
+      }
+      ]    
+      },
+      {
+      "title": `Youtube`,
+      "rows": [
+      {
+      "title": 'Como Instalar Este Bot',
+      "rowId": `install`
+      },
+      ]    
+      }
+      ],
+      }
+      },
+        {quoted: choute, contextInfo: { mentionedJid: [sender,Oowner]}})
+      leo.relayWAMessage(lista)  
+  break
+/*case 'menu':
                 if (!isRegister) return reply(baby.only.usrReg)
                 if (isBan) return reply (baby.only.benned)	
                 reply('Cargando Menu, Porfavor no hacer spam de mensaje')
@@ -1500,7 +1585,7 @@ case 'menu':
                 {contextInfo: { mentionedJid: [sender,Oowner]}})
                 men = leo.prepareMessageFromContent(from, { buttonsMessages })
                 leo.relayWAMessage(men)
-                break    
+                break*/    
 
 case 'd':
 case 'del':

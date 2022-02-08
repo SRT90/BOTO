@@ -1286,7 +1286,7 @@ if (choute.message.listResponseMessage){
 //BOTONES
 if (choute.message.listResponseMessage){
   test = choute.message.listResponseMessage.singleSelectReply.selectedRowId
-  if (test.includes(`menu`)){
+  if (test.includes(`menus`)){
   leo.updatePresence(from, Presence.composing)
   if (!isRegister) return reply(baby.only.usrReg)
   uptime = process.uptime()
@@ -1470,7 +1470,7 @@ case 'reg':
 └────「 *T90 mᎾᎠs* 」
 Verificación completa usa *${prefix}menu* para ver el Menu`
 let tampa = await getBuffer(ppimg);
-buttons = [{buttonId:`menu`,buttonText:{displayText: 'Menu'},type:1}] 
+buttons = [{buttonId:`menus`,buttonText:{displayText: 'Menu'},type:1}] 
 imageMsg = (await leo.prepareMessageMedia(tampa, "imageMessage", { thumbnail: tampa, })).imageMessage
 buttonsMessage = {footerText:`TBOT`, imageMessage: imageMsg,
 contentText:`${capt}`,buttons,headerType:4}

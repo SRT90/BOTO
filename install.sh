@@ -42,10 +42,10 @@ npm i qrcode -y
 
 echo -e '\e[1;32m
 Descarga Completada al 100%
-Creador: Thechoute
+Creador: T90 mᎾᎠs
 Numero: +34657993207
 Instagram: t9ma.n
-Youtube: https://www.youtube.com/c/thechout
+Youtube: https://www.youtube.com/channel/UC7GXmDFqoCjfvmNPjACF5CQ
 
 Escribe node thechoute para iniciar el bot
 En caso que el bot presente algun problema, comunicate con el creador su numero esta mas arriba

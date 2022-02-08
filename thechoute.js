@@ -1468,7 +1468,6 @@ Verificación completa usa *${prefix}menu* para ver el Menu`
                 prep = await limoncio.prepareMessageFromContent(from,{buttonsMessage},{quoted: choute, contextInfo: { mentionedJid: [sender], "forwardingScore": 999, "isForwarded": true}})            
                 leo.relayWAMessage(prep)
                 addFilter (from)
-                leo.sendMessage(from, tampa, image, {quoted: choute, caption: capt})
                 break 
 
 case 'menu':

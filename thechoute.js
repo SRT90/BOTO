@@ -1460,7 +1460,16 @@ case 'reg':
 [💈] DNI: _${serialUser}_
 └────「 *T90 mᎾᎠs* 」
 Verificación completa usa *${prefix}menu* para ver el Menu`
-                let tampa = await getBuffer(ppimg)
+let tampa = await getBuffer(ppimg);
+buttons = [{buttonId:`${prefix}menu`,buttonText:{displayText: 'Menu'},type:1}] 
+imageMsg = (await leo.prepareMessageMedia(tampa, "imageMessage", { thumbnail: tampa, })).imageMessage
+buttonsMessage = {footerText:`TBOT`, imageMessage: imageMsg,
+contentText:`${capt}`,buttons,headerType:4}
+prep = await leo.prepareMessageFromContent(from,{buttonsMessage},{quoted: choute, contextInfo: { mentionedJid: [sender], "forwardingScore": 999, "isForwarded": true}})
+ leo.relayWAMessage(prep)
+addFilter(from)
+break
+                /*let tampa = await getBuffer(ppimg)
                 buttons = [{buttonId:`${prefix}menu`,buttonText:{displayText: 'Menu'},type:1}]
                 imageMsg = (await leo.prepareMessageMedia(tampa, "imageMessage", { thumbnail: tampa, })).imageMessage}
                 buttonsMessage = {footerText:`TBOT`, imageMessage: imageMsg,
@@ -1468,7 +1477,7 @@ Verificación completa usa *${prefix}menu* para ver el Menu`
                 prep = await limoncio.prepareMessageFromContent(from,{buttonsMessage},{quoted: choute, contextInfo: { mentionedJid: [sender], "forwardingScore": 999, "isForwarded": true}})            
                 leo.relayWAMessage(prep)
                 addFilter (from)
-                break 
+                break */
 
 case 'menu':
                 if (!isRegister) return reply(baby.only.usrReg)
